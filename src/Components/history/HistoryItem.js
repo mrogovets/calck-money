@@ -1,0 +1,18 @@
+import React from "react";
+
+const HistoryItem = ({ transaction }) => {
+  return (
+    <>
+      <li
+        className={`history__item ${
+          transaction.add ? "history__item-plus" : "history__item-minus"
+        }`}>
+        {transaction.descripton}
+        <span className="history__money">{transaction.amount} ₽</span>
+        <button className="history__delete">x</button>
+      </li>
+    </>
+  );
+};
+
+export default HistoryItem;
